@@ -58,7 +58,7 @@ private:
     Ogre::int32 isCollide;
    
     Ogre::int32 score = 0;
-    Ogre::int32 lives = 3;
+    Ogre::int32 lives = 5;
     bool gameover = false;
     int nof = 0;
     float time = 0;
@@ -93,10 +93,10 @@ public:
 
 
 Game::Game()
-    : ApplicationContext("Assignment 1")
+    : ApplicationContext("PaddleGame")
 {
     score = 0;
-    lives = 3;
+    lives = 5;
     isCollide = 0;//no collision
     mBall = nullptr;
 
