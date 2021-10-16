@@ -10,6 +10,9 @@ class Ball
 private:
 	Ogre::int32 velY;
 	Ogre::int32 velX;
+	Ogre::int32 Angle;
+	Ogre::int32 Border;
+	Ogre::int32 Velocity;
 	Ogre::Vector3 pos;
 	Ogre::SceneNode* node;
 

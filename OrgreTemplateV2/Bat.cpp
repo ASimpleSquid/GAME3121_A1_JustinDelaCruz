@@ -16,6 +16,8 @@ Bat::Bat(Ogre::Entity* ent, Ogre::SceneManager* scnMgr)
 	node->setPosition(0, -10, 0);
 	node->setScale(0.2f, 0.05f, 1.0f);
 	node->attachObject(ent);
+	border = 102;
+	velocity = 200;
 	reset();
 
 	pos = node->getPosition();
@@ -60,12 +62,12 @@ void Bat::update(const Ogre::FrameEvent& evt)
 
 void Bat::moveLeft()
 {
-	if (node->getPosition().x > -102)
-		translate = Ogre::Vector3(-30, 0, 0);
+	if (node->getPosition().x > -border)
+		translate = Ogre::Vector3(-velocity, 0, 0);
 }
 
 void Bat::moveRight()
 {
-	if (node->getPosition().x < 102)
-		translate = Ogre::Vector3(30, 0, 0);
+	if (node->getPosition().x < border)
+		translate = Ogre::Vector3(velocity, 0, 0);
 }

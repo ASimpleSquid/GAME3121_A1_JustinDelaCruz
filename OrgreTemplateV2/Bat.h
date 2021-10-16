@@ -10,6 +10,8 @@ class Bat
 private:
 	Ogre::int32 speed;
 	Ogre::Vector3 pos;
+	Ogre::int32 border;
+	Ogre::int32 velocity;
 	Ogre::SceneNode* node;
 
 public:
