@@ -7,9 +7,7 @@ Ball::Ball(Ogre::Entity* ent, Ogre::SceneManager* scnMgr)
 	node = scnMgr->getRootSceneNode()->createChildSceneNode();
 	node->setPosition(0, 100, 0);
 	node->setScale(0.1f, 0.1f, 0.1f);
-	angle = 135;
-	boundry = 112;
-	velocity = 100;
+
 	node->attachObject(ent);
 	reset();
 	
@@ -59,19 +57,19 @@ void Ball::setVelY(Ogre::int32 y)
 }
 void Ball::update(const Ogre::FrameEvent& evt)
 {
-	btranslate = Ogre::Vector3(-velocity * velX, -velocity * velY, 0);
+	btranslate = Ogre::Vector3(-10 * velX, -10 * velY, 0);
     //moving ball
-    if (node->getPosition().y > angle)
+    if (node->getPosition().y > 135)
     {
         velY = 1;
     }
     
-    if (node->getPosition().x > boundry)
+    if (node->getPosition().x > 112)
     {
         velX = 1;
        // std::cout << "greater then 112" << std::endl;
     }
-    if (node->getPosition().x < -boundry)
+    if (node->getPosition().x < -112)
     {
         //std::cout << "less then -112" << std::endl;
         velX = -1;

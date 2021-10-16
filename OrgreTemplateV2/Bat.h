@@ -9,8 +9,6 @@ class Bat
 {
 private:
 	Ogre::int32 speed;
-	Ogre::int32 boundry;
-	Ogre::int32 velocity;
 	Ogre::Vector3 pos;
 	Ogre::SceneNode* node;
 
